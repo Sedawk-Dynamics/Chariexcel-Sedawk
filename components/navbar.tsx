@@ -84,11 +84,11 @@ export default function Navbar() {
             <motion.div whileHover={{ scale: 1.02 }} className="flex items-center gap-2 flex-shrink-0">
               <Link href="/" onClick={closeMenus} className="flex items-center">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5VBR3gwsqgxcmJrdhg17QpE4Z5v5aU.png"
+                  src="/logo.png"
                   alt="Charis Excel Training and Development"
-                  width={220}
-                  height={72}
-                  className="h-24 w-auto object-contain"
+                  width={633}
+                  height={358}
+                  className="h-20 lg:h-24 w-auto object-contain"
                   priority
                 />
               </Link>

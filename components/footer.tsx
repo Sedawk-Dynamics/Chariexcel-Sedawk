@@ -78,11 +78,11 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <div className="bg-white rounded-xl px-4 py-2 inline-block mb-4">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5VBR3gwsqgxcmJrdhg17QpE4Z5v5aU.png"
+                  src="/logo.png"
                   alt="Charis Excel Training and Development"
-                  width={180}
-                  height={58}
-                  className="h-14 w-auto object-contain"
+                  width={633}
+                  height={358}
+                  className="h-16 w-auto object-contain"
                 />
               </div>
               <p className="text-white/50 text-sm leading-relaxed mb-5">
