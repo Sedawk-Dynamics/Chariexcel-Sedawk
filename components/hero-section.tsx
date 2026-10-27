@@ -71,12 +71,17 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2.5 glass px-5 py-2.5 rounded-full mb-7 border border-[#F5A623]/40"
+              className="inline-flex items-start gap-2.5 glass px-5 py-3 rounded-2xl mb-7 border border-[#F5A623]/40 max-w-xl"
             >
-              <Sparkles size={16} className="text-[#F5A623]" />
-              <span className="text-[#F5A623] text-base font-bold tracking-wide">
-                Premium Training &amp; Development
-              </span>
+              <Sparkles size={16} className="text-[#F5A623] mt-1 shrink-0" />
+              <div className="flex flex-col gap-1">
+                <span className="text-[#F5A623] text-sm sm:text-base font-bold tracking-wide leading-snug">
+                  Registered under the Ministry of Micro, Small and Medium Enterprises (MSME), Government of India.
+                </span>
+                <span className="text-white/90 text-sm font-semibold tracking-wide">
+                  Udyam Registration No.: UDYAM-GA-02-0037531
+                </span>
+              </div>
             </motion.div>
 
             {/* Headline */}
