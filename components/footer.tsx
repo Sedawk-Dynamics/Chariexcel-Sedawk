@@ -147,7 +147,7 @@ export default function Footer() {
                   { label: "director@charisexl.com", href: "mailto:director@charisexl.com" },
                   { label: "corporate@charisexl.com", href: "mailto:corporate@charisexl.com" },
                   { label: "partnerships@charisexl.com", href: "mailto:partnerships@charisexl.com" },
-                  { label: "www.charisexl.com", href: "https://www.charisexl.com" },
+                  { label: "charisexl.com", href: "https://charisexl.com" },
                 ].map((item) => (
                   <a
                     key={item.label}

@@ -1,15 +1,11 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { Quote, ArrowRight } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHero from "@/components/page-hero"
 
-export const metadata: Metadata = {
-  title: "Our Story | Charis Excel Training & Development",
-  description:
-    "How Charis Excel began — with one question that couldn't be ignored: Why does so much learning fail to create real change?",
-}
+export const metadata = pageMetadata("/our-story")
 
 const milestones = [
   {

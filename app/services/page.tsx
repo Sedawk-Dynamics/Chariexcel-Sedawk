@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import Navbar from "@/components/navbar"
@@ -6,11 +6,7 @@ import Footer from "@/components/footer"
 import PageHero from "@/components/page-hero"
 import ServicesGrid from "@/components/services-grid"
 
-export const metadata: Metadata = {
-  title: "Our Services | Charis Excel Training & Development",
-  description:
-    "Explore Charis Excel's full range of training programs — corporate leadership, Goa offsites, student development, teacher training, career readiness, team building, and more.",
-}
+export const metadata = pageMetadata("/services")
 
 export default function ServicesPage() {
   return (

@@ -1,13 +1,9 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ContactForm from "@/components/contact-form"
 
-export const metadata: Metadata = {
-  title: "Contact Us | Charis Excel Training & Development",
-  description:
-    "Let's build something remarkable together. Reach out to Charis Excel Training & Development and let us understand your goals.",
-}
+export const metadata = pageMetadata("/contact-us")
 
 export default function ContactUsPage() {
   return (

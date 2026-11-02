@@ -1,15 +1,11 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { Target, Eye, BookOpen, ArrowRight } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHero from "@/components/page-hero"
 
-export const metadata: Metadata = {
-  title: "About Us | Charis Excel Training & Development",
-  description:
-    "Charis Excel Training & Development exists to close the gap between learning and results — crafting outcome-driven experiences for organizations, educators, and individuals.",
-}
+export const metadata = pageMetadata("/about-us")
 
 const pillars = [
   {

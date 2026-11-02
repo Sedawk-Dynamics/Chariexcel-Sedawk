@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { organizationSchema, siteName, siteUrl } from '@/lib/seo'
 import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
@@ -15,21 +16,27 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Charis Excel Training & Development | Excellence Elevated',
-  description:
-    'Charis Excel Training & Development — a premium learning and transformation company focused on building real-world skills, confidence, and leadership in corporates, teachers, parents & students.',
-  keywords: [
-    'corporate training',
-    'leadership development',
-    'training Goa',
-    'student development',
-    'teacher training',
-    'Charis Excel',
-  ],
-  openGraph: {
-    title: 'Charis Excel Training & Development',
-    description: 'Excellence Elevated — Premium Corporate Training & Development',
-    type: 'website',
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
+  title: siteName,
+  robots: {
+    index: true, follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/icon.svg', type: 'image/svg+xml', sizes: 'any' },
+      { url: '/icon-light-32x32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+  },
+  // Use the content value from the provider's verification tag when supplied.
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION }
+      : undefined,
   },
 }
 
@@ -40,7 +47,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${plusJakarta.variable} ${playfair.variable} bg-background`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema).replace(/</g, '\\u003c') }}
+        />
+        {children}
+      </body>
     </html>
   )
 }

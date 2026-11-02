@@ -1,14 +1,10 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHero from "@/components/page-hero"
 import ValuesSection from "@/components/values-section"
 
-export const metadata: Metadata = {
-  title: "Our Values | Charis Excel Training & Development",
-  description:
-    "The principles that shape every program, interaction, and outcome at Charis Excel — continuous learning, mindset transformation, excellence, and empowerment with purpose.",
-}
+export const metadata = pageMetadata("/our-values")
 
 export default function OurValuesPage() {
   return (

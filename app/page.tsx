@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo"
 import Navbar from "@/components/navbar"
 import HeroSection from "@/components/hero-section"
 import AboutSection from "@/components/about-section"
@@ -7,6 +8,8 @@ import WhyUsSection from "@/components/why-us-section"
 import TeamSection from "@/components/team-section"
 import CtaSection from "@/components/cta-section"
 import Footer from "@/components/footer"
+
+export const metadata = pageMetadata("/")
 
 export default function HomePage() {
   return (

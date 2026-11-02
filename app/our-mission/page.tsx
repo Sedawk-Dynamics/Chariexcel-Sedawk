@@ -1,15 +1,11 @@
-import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { Target, ArrowRight, CheckCircle2 } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHero from "@/components/page-hero"
 
-export const metadata: Metadata = {
-  title: "Our Mission | Charis Excel Training & Development",
-  description:
-    "To break limiting mindsets and foster a culture of continuous learning — empowering organizations, educators, and students to excel in an ever-evolving world.",
-}
+export const metadata = pageMetadata("/our-mission")
 
 const points = [
   "Break limiting mindsets and unlock real potential.",
