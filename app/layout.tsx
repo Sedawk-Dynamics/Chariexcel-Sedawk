@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   // Use the content value from the provider's verification tag when supplied.
   verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    google: process.env.GOOGLE_SITE_VERIFICATION || 'IUOLce__EWsqsg5lgnwPn2InlibN3HtPdTlz9pCRQbU',
     other: process.env.BING_SITE_VERIFICATION
       ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION }
       : undefined,
